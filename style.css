@@ -6,12 +6,16 @@
     color: white;
 }
 
+@font-face {
+    font-family: 'ggilroy';
+    src: url('fonts/Gilroy-ExtraBold.ttf');
+}
             
 
 body, html {
     width: 100%;
     height: 100%;
-    background-image: url('background.png');
+    background-image: url('images/background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -402,7 +406,7 @@ body {
 .bottomstore .rankbox .img {
     width: 200px;
     height: 200px;
-    background-image: url('vip.png');
+    background-image: url('images/vip.png');
     background-size: cover;
     overflow: hidden;
     transition: .1s linear;
