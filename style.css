@@ -1,0 +1,523 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    color: white;
+}
+
+            
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background-image: url('background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    scroll-behavior: smooth !important;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+/* 3. Check karein: kahin aapne overflow-y: scroll toh nahi likha? 
+   Agar likha hai toh use hata kar 'visible' ya 'auto' karein */
+body {
+  overflow-x: hidden; 
+}
+
+.nav {
+    /* background-color: crimson; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 100px;
+    background: rgba(0, 0, 0, 0.011);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+
+}
+
+.nav h1 {
+    color: royalblue;
+    font-size: 40px;
+    cursor: pointer;
+    transition: .3s linear;
+    text-shadow: 0 0 50px royalblue;
+}
+
+.nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav img {
+    width: 50px;
+    filter: drop-shadow(0 0 10px rgba(88, 101, 242, 0.5));
+}
+
+.nav h1:hover {
+    transform: scale(1.05);
+}
+
+.nav .rightside {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.nav .rightside a {
+    font-size: 20px;
+    font-weight:300;
+    text-decoration: none;
+    padding: 0;
+    transition: linear .3s;
+}
+
+.nav .rightside a:hover {
+    color: royalblue;
+    text-shadow: 0 0 5px royalblue;
+}
+
+.nav .rightside #storee {
+    background-color: royalblue;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav .rightside #storee:hover{
+    color: white;
+    background-color: rgb(32, 72, 192);
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 135px 100px;
+    /* gap: 20vw; */
+     animation: 
+    flyIn 0.8s ease-out forwards, 
+    floatLoop 3s ease-in-out infinite 0.8s;
+}
+
+.hero .leftside {
+    /* background-color: crimson; */
+    width: 100vw;
+    height: 100%;
+    display: inline-block; /* Essential for transforms to work on spans */
+  
+  /* Applying both animations */
+  /* flyIn runs once for 0.8s */
+  /* floatLoop starts after 0.8s and runs forever */
+ 
+    
+}
+
+.hero .leftside span {
+    color: royalblue;
+}
+
+.hero .leftside h1 {
+    font-size: 70px;
+    line-height: 60px;
+}
+
+
+
+.hero .leftside p {
+    font-size: 28px;
+    margin-top: 30px;
+    color: #ccc;
+}
+
+.hero .leftside .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.hero .leftside .buttons a {
+    text-decoration: none;
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.hero .leftside .buttons i {
+    color: white;
+    transition: .3s linear;
+}
+
+.hero .leftside .buttons i:hover {
+    color: royalblue;
+}
+
+
+.hero .rightside {
+    /* background-color: green; */
+    width: 100%;
+    height: 100%;
+    
+}
+
+.hero .rightside img {
+    width: 400px;
+    height: 400px;
+    margin-left: 10vw;
+     display: inline-block; /* Essential for transforms to work on spans */
+    
+  /* Applying both animations */
+  /* flyIn runs once for 0.8s */
+  /* floatLoop starts after 0.8s and runs forever */
+  transition:  all .3s linear;
+    
+}
+
+.hero .rightside img:hover {
+    scale: 1.1;
+}
+
+.howtojoin {
+    /* background-image: url('https://imgs.search.brave.com/2BcJq_NLfWXuC6Egj1aUqhzBv7_ej9P-BahAiFTK4VA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9leHB1/dGVyLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyMi8xMC9E/b2NrLmpwZw');
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* background-color: red; */
+    /* height: 100vh; */
+    /* padding: 80px 0; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding: 150px 100px; */
+    /* gap: 20vw; */
+     animation: 
+    flyIn 0.8s ease-out forwards ;
+    /* background-color: red; */
+    margin-bottom: 40px;
+    scroll-margin-top: 80px; 
+}
+
+.howtojoin .top {
+    /* background-color: crimson; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* background-color: red; */
+}
+
+.howtojoin .top h3 {
+    font-size: 45px;
+    /* margin-bottom: 20px; */
+    text-shadow: 0 0 40px royalblue;
+    color: royalblue;
+}
+
+.howtojoin .top p {
+    font-size: 23px;
+}
+
+.howtojoin .bottom {
+    /* background-color: lightseagreen; */
+    width: 100%;
+    /* height: 100%; */
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.howtojoin .bottom i {
+    font-size: 50px;
+    color: royalblue;
+    font-weight: 900;
+}
+
+
+
+
+.howtojoin .bottom .steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.howtojoin .bottom #step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    /* padding: 10px 15px; */
+    text-align: center;
+    gap: 10px;
+}
+
+.howtojoin .bottom .steps h3 {
+    background-color: royalblue;
+    padding: 30px;
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.howtojoin .bottom .steps h4 {
+    color: royalblue;
+    font-size: 25px;
+}
+
+.howtojoin .bottom .steps p {
+    font-size: 18px;
+}
+
+.contactus {
+    /* min-width: 200px; */
+    /* height: 100vh; */
+    width: 90%;      
+    max-width: 1000px;  
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(65, 105, 225, 0.038);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: 1px rgba(65, 105, 225, 0.132) solid;
+    animation: flyIn 0.8s ease-out forwards;
+    scroll-margin-top: 85px;
+}
+
+.contactus h1 {
+    font-size: 45px;
+    text-shadow: 0 0 40px royalblue;
+    margin-bottom: 20px;
+    color: royalblue;
+}
+
+.contactus p{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contactus .joinbtn {
+    background-color: royalblue;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: .3s linear;
+    font-weight: 600;
+    box-shadow: 0 0 30px royalblue;
+}
+
+.contactus .joinbtn:hover {
+    background-color: rgb(75, 113, 229);
+    scale: 1.05;
+    box-shadow: 0 0 35px royalblue;
+}
+
+.store {
+    padding: 5px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    scroll-margin-top: 80px;
+}
+
+.store .top {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.store .top h1 {
+    font-size: 45px;
+    text-shadow: 0 0 40px;
+    color: royalblue;
+    
+}
+
+.store .top p {
+    font-size: 20px;
+}
+
+.bottomstore {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.bottomstore .rankbox {
+    background-color: rgba(0, 0, 0, 0.227);
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    border: rgb(46, 46, 46) 1px solid;
+    border-radius: 10px;
+    transition: .3s linear;
+}
+
+.bottomstore .rankbox:hover {
+    transform: translateY(-5px);
+    background-color: rgba(0, 0, 0, 0.383);
+}
+
+
+.bottomstore .rankbox .img {
+    width: 200px;
+    height: 200px;
+    background-image: url('vip.png');
+    background-size: cover;
+    overflow: hidden;
+    transition: .1s linear;
+    object-fit: cover;
+}
+
+.bottomstore .rankbox .img:hover {
+    transform: scale(1.1);
+}
+
+.bottomstore .rankbox h3 {
+    font-size: 30px;
+    color: #74fa42;
+    margin-bottom: 18px;
+}
+
+.bottomstore .perks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    /* margin-bottom: 20px; */
+    /* padding: 10px; */
+    
+}
+
+
+
+.bottomstore .perks h4 {
+    display: flex;           /* Magic starts here */
+    align-items: flex-start;  /* Icon ko top line ke saath rakhega */
+    gap: 12px;               /* Icon aur text ke beech ka gap */
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.bottomstore i {
+    color: royalblue;
+flex-shrink: 0;          /* Taaki icon pichke nahi */
+    margin-top: 2px;
+}
+
+.bottomstore .purchase {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.buy {
+    display: flex;
+    align-items: center;
+    gap:10px;
+    background-color: royalblue;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    /* width: 100%; */
+    transition: .3s linear;
+}
+
+.buy:hover {
+    background-color: rgb(32, 72, 192);
+    transform: translateY(-1.5px);
+    box-shadow: 0 0 10px royalblue;
+}
+
+.purchase #price {
+    color: royalblue;
+    font-size: 25px;
+}
+
+.buy h4 {
+    color: white;
+    font-size: 18px;
+}
+
+
+
+.buy i {
+    color: white;
+}
+
+
+
+
+.footer {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.footer h4 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@keyframes flyIn {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Infinite loop: Up and Down */
+
+
+@media (max-width : 768px) {
+    
+}
